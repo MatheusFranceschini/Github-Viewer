@@ -13,6 +13,7 @@
 		765DE0DA2D5655A900B80CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 765DE0D92D5655A900B80CC6 /* Base */; };
 		765DE0DC2D5655AE00B80CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765DE0DB2D5655AE00B80CC6 /* Assets.xcassets */; };
 		765DE0DF2D5655AE00B80CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 765DE0DE2D5655AE00B80CC6 /* Base */; };
+		765DE0E72D56596D00B80CC6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765DE0E62D56596D00B80CC6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		765DE0DB2D5655AE00B80CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		765DE0DE2D5655AE00B80CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765DE0E02D5655AE00B80CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765DE0E62D56596D00B80CC6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				765DE0DB2D5655AE00B80CC6 /* Assets.xcassets */,
 				765DE0DD2D5655AE00B80CC6 /* LaunchScreen.storyboard */,
 				765DE0E02D5655AE00B80CC6 /* Info.plist */,
+				765DE0E62D56596D00B80CC6 /* DetailViewController.swift */,
 			);
 			path = "Github Viewer";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				765DE0D72D5655A900B80CC6 /* ViewController.swift in Sources */,
 				765DE0D32D5655A900B80CC6 /* AppDelegate.swift in Sources */,
 				765DE0D52D5655A900B80CC6 /* SceneDelegate.swift in Sources */,
+				765DE0E72D56596D00B80CC6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matheusfranceschini.Github-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,6 +343,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matheusfranceschini.Github-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
