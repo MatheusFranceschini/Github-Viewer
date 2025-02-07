@@ -26,7 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search"/>
                                 <connections>
-                                    <segue destination="bm7-u2-L8x" kind="show" id="0R9-Gi-X0b"/>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUB-O0-at6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,6 +42,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="REU-u1-5i6"/>
+                    <connections>
+                        <outlet property="usernameTextField" destination="jBD-Uj-FBi" id="qFT-dg-Guj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,26 +58,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-8G-kvf">
-                                <rect key="frame" x="135" y="119" width="160" height="160"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicorn.png" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-8G-kvf">
+                                <rect key="frame" x="135" y="75" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="8fd-pH-k7o"/>
                                     <constraint firstAttribute="height" constant="160" id="Qki-i2-Kg5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeremy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-5U-AdA">
-                                <rect key="frame" x="187" y="295" width="56" height="20.666666666666686"/>
+                                <rect key="frame" x="187" y="250.99999999999997" width="56" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-zA-Wyp">
-                                <rect key="frame" x="0.0" y="332.66666666666669" width="430" height="599.33333333333326"/>
+                                <rect key="frame" x="0.0" y="288.66666666666669" width="430" height="643.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-oV-67H" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="331.66666666666669" width="430" height="1"/>
+                                <rect key="frame" x="0.0" y="287.66666666666669" width="430" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="VlL-b6-D6G"/>
@@ -128,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="unicorn.png" width="200" height="205"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
