@@ -7,11 +7,16 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var repositoriesTableView: UITableView!
+    
+    var repositories: [Repository] = []
+    var userLogin: String?
+    var userAvatarURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,12 @@ class DetailViewController: UIViewController {
         profileImageView.backgroundColor = .blue
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        
+        usernameLabel.text = userLogin
+        
+        if let userAvatarURL = userAvatarURL, let url = URL(string: userAvatarURL) {
+            profileImageView.kf.setImage(with: url)
+        }
     }
     
     func configureTableView() {
@@ -34,14 +45,14 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "\(indexPath.row)"
-        content.secondaryText = "teste"
+        content.text = repositories[indexPath.row].name
+        content.secondaryText = repositories[indexPath.row].language
         cell.contentConfiguration = content
         return cell
     }
