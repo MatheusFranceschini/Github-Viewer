@@ -31,15 +31,14 @@ class ViewController: UIViewController {
             case.success(let user):
                 self.userLogin = user.login
                 self.userAvatarURL = user.avatar_url
-                self.fetchData(from: repoUrl)
-                
+                self.fetchRepositories(from: repoUrl)
             case.failure(let error):
-                print(error.localizedDescription)
+                self.createAlert(title: "User not found. Please enter another name.", message: nil)
             }
         }
     }
     
-    func fetchData(from url: String) {
+    func fetchRepositories(from url: String) {
         
         AF.request(url).responseDecodable(of: [Repository].self) { response in
             switch response.result {
@@ -54,10 +53,17 @@ class ViewController: UIViewController {
                     self.performSegue(withIdentifier: "showDetailViewController", sender: self)
                 }
             case.failure(let error):
-                //Colocar alerta de erro
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func createAlert(title: String, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+        
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,7 +77,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: UIButton) {
-//        fetchData()
         fetchUser()
     }
     

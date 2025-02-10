@@ -66,18 +66,34 @@
 		765DE0D12D5655A900B80CC6 /* Github Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				765DE1152D59A16500B80CC6 /* ViewController */,
+				765DE1142D59A13600B80CC6 /* Models */,
 				765DE0D22D5655A900B80CC6 /* AppDelegate.swift */,
 				765DE0D42D5655A900B80CC6 /* SceneDelegate.swift */,
-				765DE0D62D5655A900B80CC6 /* ViewController.swift */,
 				765DE0D82D5655A900B80CC6 /* Main.storyboard */,
 				765DE0DB2D5655AE00B80CC6 /* Assets.xcassets */,
 				765DE0DD2D5655AE00B80CC6 /* LaunchScreen.storyboard */,
 				765DE0E02D5655AE00B80CC6 /* Info.plist */,
-				765DE0E62D56596D00B80CC6 /* DetailViewController.swift */,
+			);
+			path = "Github Viewer";
+			sourceTree = "<group>";
+		};
+		765DE1142D59A13600B80CC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				765DE0ED2D56AF9900B80CC6 /* Repository.swift */,
 				765DE10F2D580CC300B80CC6 /* User.swift */,
 			);
-			path = "Github Viewer";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		765DE1152D59A16500B80CC6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				765DE0D62D5655A900B80CC6 /* ViewController.swift */,
+				765DE0E62D56596D00B80CC6 /* DetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
